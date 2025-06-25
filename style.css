@@ -1,0 +1,35 @@
+  :root {
+      --primary-color: #0082C6;
+      --secondary-color: #00002B;
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* .navbar {
+      background-color: var(--primary-color);
+    } */
+
+    .card-title {
+      color: var(--primary-color);
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .dark-toggle {
+      cursor: pointer;
+      color: #fff;
+      font-size: 1rem;
+    }
