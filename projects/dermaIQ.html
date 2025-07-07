@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexvative - Innovative Tech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../assets/N.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <div class="">
+                    <a href="../index.html" class="flex items-center gap-1">
+                        <img src="../assets/N.png" width="36" alt="">
+                        <h1 class="text-2xl font-bold text-[#3b82f6]">exvative</h1>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Home</a>
+                    <a href="../index.html#projects" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Capabilities</a>
+                    <a href="../index.html#contact" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none menu-button">
+                    <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Detail Section -->
+    <section id="project-detail" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">DermaIQ: AI Skincare Web App</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Web based system built with Django uses Computer Vision to detect 10 different facial diseases. Fully functional dashboard to view previous scan results. Results can be shared via whatsapp on facebook twitter etc. 
+                </p>
+            </div>
+
+            <div class="slide-up">
+                <!-- Compact Image Slider Section -->
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="swiper project-slider rounded-xl shadow-lg overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/Picture1.png')">
+                                <img src="/assets/Picture1.png" class="w-full h-auto object-cover">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/Picture2.png')">
+                                <img src="/assets/Picture2.png" class="w-full h-auto object-cover">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/Picture3.png')">
+                                <img src="/assets/Picture3.png" class="w-full h-auto object-cover">
+                            </div>
+                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/Picture4.png')">
+                                <img src="/assets/Picture4.png" class="w-full h-auto object-cover">
+                            </div>
+                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/Picture5.png')">
+                                <img src="/assets/Picture5.png" class="w-full h-auto object-cover">
+                            </div>
+                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/Picture6.png')">
+                                <img src="/assets/Picture6.png" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <!-- Add pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-90 p-4">
+        <div class="relative max-w-6xl max-h-screen">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl hover:text-gray-300">&times;</button>
+            <img id="lightbox-img" class="max-w-full max-h-screen" src="" alt="">
+            <div id="lightbox-caption" class="text-white text-center mt-2 text-lg"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0 fade-in">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Nexvative</h3>
+                    <p class="text-gray-400 text-lg">Innovative technology solutions to power your business growth and digital transformation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- GitHub Icon -->
+                        <a href="https://github.com/Nexvative" target="_blank" class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <!-- Gmail Icon -->
+                        <a href="mailto:nexvativetech1@gmail.com" target="_blank" class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/company/105403830" target="_blank" class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.1s;">
+                    <h4 class="text-xl font-semibold mb-4 gradient-text">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">Generative Ai</a></li>
+                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
+                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a></li>
+                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.2s;">
+                    <h4 class="text-xl font-semibold mb-4 gradient-text">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-lg text-gray-400 hover:gradient-text transition">About Us</a></li>
+                        <li><a href="../view-all-projects.html" class="text-lg text-gray-400 hover:gradient-text transition">Our Work</a></li>
+                        <li><a href="../index.html#contact" class="text-lg text-gray-400 hover:gradient-text transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-lg text-gray-400 hover:gradient-text transition">2025. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hidden" aria-label="Back to Top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

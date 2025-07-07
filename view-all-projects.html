@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexvative - Innovative Tech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="N.png" type="image/x-icon">
+    
+  <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-10px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .animate-fade {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .animate-slide {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+        
+        .project {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease-out;
+        }
+        
+        .project.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(90deg, #3b82f6, #a855f7);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <div class="">
+                    <a href="index2.html" class="flex items-center gap-1">
+                        <img src="N.png" width="36" alt="">
+                        <h1 class="text-2xl font-bold text-[#3b82f6]">exvative</h1>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index2.html" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Home</a>
+                    <a href="index2.html#projects" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Capabilities</a>
+                    <a href="index2.html#contact" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none menu-button">
+                    <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section with Tabs -->
+    <section id="projects" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 id="projects-heading" class="text-4xl font-bold text-gray-900 mb-4">All <span class="gradient-text">Projects</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Explore our full portfolio of innovative solutions across various technology domains.</p>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center mb-12 space-x-2 space-y-2 sm:space-y-0">
+                <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100 active" 
+                        data-tab="all">All</button>
+                <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100" 
+                        data-tab="generative-ai">Generative AI</button>
+                <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100" 
+                        data-tab="ai-ml">AI/ML</button>
+                <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100" 
+                        data-tab="computer-vision">Computer Vision</button>
+                <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100" 
+                        data-tab="web-development">Web Development</button>
+            </div>
+            
+            <!-- Projects Container -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Project 1 -->
+                <a href="projects/project1.html" class="group project" data-categories="generative-ai web-development">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/Picture1.png" alt="DermaIQ" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">DermaIQ: AI Skincare Web App</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Web based system built with Django uses Computer Vision to detect 10 different facial diseases.</p>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block text-blue-600 font-medium">View Project →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="projects/project2.html" class="group project" data-categories="web-development">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/Picture7.png" alt="StyleFlux" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">StyleFlux: Real-Time Artistic Makeover</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">StyleFlux is an AI tool that applies the style of one image to another using the INSTANTSTYLE pipeline.</p>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block text-blue-600 font-medium">View Project →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 3 -->
+                <a href="projects/project3.html" class="group project" data-categories="computer-vision">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/Picture13.png" alt="Brain Tumor Segmentation" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Brain Tumor Segmentation with U-Net</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">A computer vision model designed to accurately segment brain tumors in X-ray images.</p>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block text-blue-600 font-medium">View Project →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 4 -->
+                <a href="projects/project4.html" class="group project" data-categories="computer-vision">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/Picture15.png" alt="VAE for Alzheimer's" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">VAE for Alzheimer's Data Augmentation</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">A Variational Autoencoder (VAE) model developed to augment limited Alzheimer's datasets.</p>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block text-blue-600 font-medium">View Project →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 5 -->
+                <a href="projects/project5.html" class="group project" data-categories="generative-ai">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
+                        <div class="h-56 overflow-hidden">
+                            <img src="assets/Picture16.png" alt="Research ARCHIE" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">Research ARCHIE: AI for Academic Discovery</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">A web application developed using streamlit to help researchers read and understand papers.</p>
+                            <div class="mt-auto pt-2">
+                                <span class="inline-block text-blue-600 font-medium">View Project →</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="index2.html#contact" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0 fade-in">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Nexvative</h3>
+                    <p class="text-gray-400 text-lg">Innovative technology solutions to power your business growth and
+                        digital transformation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- GitHub Icon -->
+                        <a href="https://github.com/Nexvative" target="_blank"
+                            class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <!-- Gmail Icon -->
+                        <a href="mailto:nexvativetech1@gmail.com" target="_blank"
+                            class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/company/105403830" target="_blank"
+                            class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.1s;">
+                    <h4 class="text-xl font-semibold mb-4 gradient-text">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index2.html#projects"
+                                class="text-lg text-gray-400 hover:gradient-text transition">Generative Ai</a>
+                        </li>
+                        <li><a href="index2.html#projects"
+                                class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
+                        <li><a href="index2.html#projects"
+                                class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a>
+                        </li>
+                        <li><a href="index2.html#projects"
+                                class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.2s;">
+                    <h4 class="text-xl font-semibold mb-4 gradient-text">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-lg text-gray-400 hover:gradient-text transition">About Us</a>
+                        </li>
+                        <li><a href="view-all-projects.html"
+                                class="text-lg text-gray-400 hover:gradient-text transition">Our
+                                Work</a></li>
+                        <li><a href="index2.html#contact"
+                                class="text-lg text-gray-400 hover:gradient-text transition">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <p class="text-lg text-gray-400 hover:gradient-text transition">2025. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const projects = document.querySelectorAll('.project');
+    const projectsHeading = document.getElementById('projects-heading');
+    
+    // Map tab names to display names
+    const tabDisplayNames = {
+        'all': 'All ',
+        'generative-ai': 'Generative AI',
+        'ai-ml': 'AI/ML',
+        'computer-vision': 'Computer Vision',
+        'web-development': 'Web Development'
+    };
+    
+    // Function to update the heading
+    function updateHeading(category) {
+        const displayName = tabDisplayNames[category] || 'All Our';
+        projectsHeading.innerHTML = `${displayName} <span class="gradient-text">Projects</span>`;
+    }
+    
+    // Function to activate a tab and its content
+    function activateTab(category) {
+        // Remove active class from all tabs
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.style.transform = '';
+        });
+        
+        // Add active class to the selected tab
+        const activeTab = document.querySelector(`.tab-button[data-tab="${category}"]`);
+        if (activeTab) {
+            activeTab.classList.add('active');
+        }
+    }
+    
+    // Function to filter projects
+    function filterProjects(category) {
+        projects.forEach((project, index) => {
+            const categories = project.getAttribute('data-categories').split(' ');
+            
+            if (category === 'all' || categories.includes(category)) {
+                setTimeout(() => {
+                    project.classList.remove('hidden');
+                    project.style.opacity = '0';
+                    project.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        project.style.opacity = '1';
+                        project.style.transform = 'translateY(0)';
+                    }, 50);
+                }, 50 * (index % 3));
+            } else {
+                project.classList.add('hidden');
+            }
+        });
+    }
+    
+    // Check URL hash on page load
+    function checkHash() {
+        const hash = window.location.hash.substring(1); // Remove the #
+        const validTabs = ['generative-ai', 'ai-ml', 'computer-vision', 'web-development'];
+        const category = validTabs.includes(hash) ? hash : 'all';
+        
+        updateHeading(category);
+        activateTab(category);
+        filterProjects(category);
+    }
+    
+    // Tab click event handler
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.getAttribute('data-tab');
+            
+            // Update heading
+            updateHeading(category);
+            
+            // Update URL hash without page reload
+            window.location.hash = category === 'all' ? '' : category;
+            
+            // Add click animation
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 200);
+            
+            activateTab(category);
+            filterProjects(category);
+        });
+    });
+    
+    // Handle hash changes (when using browser back/forward)
+    window.addEventListener('hashchange', checkHash);
+    
+    // Initialize
+    setTimeout(() => {
+        checkHash();
+        
+        // Animate projects
+        projects.forEach((project, index) => {
+            setTimeout(() => {
+                project.classList.add('visible');
+            }, 100 * index);
+        });
+    }, 100);
+});
+ </script>
+</body>
+</html>

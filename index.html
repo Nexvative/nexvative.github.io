@@ -2,150 +2,271 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexvative</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexvative - Innovative Tech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/N.png" type="image/x-icon">
+
 </head>
 
-<body>
-  <!--  HERO SECTION SPANNING COMPLETE PAGE -->
-
-  <section id="hero" class="vh-100 vw-100 d-flex flex-column justify-content-between bg-light"
-    style="background: linear-gradient(135deg, #f0f9ff, #d0eaff);">
-    <div class="position-absolute top-0 start-0 p-3">
-      <img src="assets/Nexvative.png" alt="Nexvative Logo" style="height: 75px;" />
-    </div>
-
-    <!-- Centered content -->
-    <div class="d-flex flex-column justify-content-center align-items-center text-center px-3 flex-grow-1">
-      <h1 class="display-3 fw-bold text-primary mb-3"> Redefining Innovation at Every Step</h1>
-      <p class="lead text-dark mb-4" style="max-width: 800px;">
-        At Nexvative, we combine cutting-edge AI, ML, and modern web development to craft future-ready solutions.
-        Whether you're launching a product or scaling a platform, our agile expertise drives innovation with precision,
-        speed, and purpose.
-      </p>
-
-      <!-- CTA Buttons -->
-      <div class="mb-5">
-        <a href="#categories" class="btn btn-primary btn-lg me-3">Explore Projects</a>
-        <a href="#contact" class="btn btn-outline-secondary btn-lg">Contact Us</a>
-      </div>
-
-      <!-- Value Propositions -->
-    </div>
-  </section>
-
-
-  <section id="categories" class="py-5 px-3 vh-100 vw-100 overflow-y-scroll"
-    style="background: linear-gradient(135deg, #f0f9ff, #d0eaff);">
-    <div class="container">
-      <h2 class="display-5 fw-semibold text-primary text-center mb-5">Our Capabilities</h2>
-
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-          <a href="categories/generative_ai.html" target="_blank" class="text-decoration-none w-100">
-            <div class="card text-start shadow-sm border-0 rounded-4 p-4 h-100">
-              <img src="assets/gen_Ai.jpg" class="card-img-top img-fluid mb-3" alt="Generative AI"
-                style="max-height: 200px; object-fit: cover;">
-              <h3 class="fw-bold text-primary mb-2 text-center">Generative AI</h3>
-              <p class="text-muted small text-center">
-                At Nexvative, we specialize in crafting intelligent systems powered by state-of-the-art Generative AI.
-                Our solutions help businesses automate, understand, and generate human-like content using the latest
-                advancements in large language models (LLMs).
-              </p>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+   <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <div class="container mx-auto px-6 py-5">
+        <div class="flex items-center justify-between">
+            <div class="">
+                <a href="index.html" class="flex items-center gap-1"><img src="assets/N.png" width="36" alt="">
+                    <h1 class="text-2xl font-bold text-[#3b82f6]">exvative</h1>
+                </a>
             </div>
-          </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Home</a>
+                <a href="#projects" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Capabilities</a>
+                <a href="#contact" class="text-lg font-medium text-gray-900 hover:gradient-text transition">Contact</a>
+            </nav>
+            <button class="md:hidden focus:outline-none menu-button">
+                <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
+    </div>
+</header>
 
-        <div class="col-12 col-md-6 col-lg-4 d-flex">
-          <a href="categories/ml_ai.html" target="_blank" class="text-decoration-none w-100">
-            <div class="card text-start shadow-sm border-0 rounded-4 p-4 h-100">
-              <img src="assets/ml_ai.png" class="card-img-top img-fluid mb-3" alt="ML and AI"
-                style="max-height: 200px; object-fit: cover;">
-              <h3 class="fw-bold text-primary mb-2 text-center">ML & AI</h3>
-              <p class="text-muted small text-center">
-                We design and deploy machine learning models that power data-driven decisions—from classical ML
-                pipelines to cutting-edge AI systems across industries like healthcare, finance, and operations.
-              </p>
+    <!-- Hero Section -->
+    <section id="home" class="py-24 bg-gradient-to-br from-blue-100 via-purple-50 to-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 fade-in">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    Redefining <span class="gradient-text">Innovation</span> at Every Step
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">At Nexvative, we combine cutting-edge AI, ML, and
+                    modern web development to craft future-ready solutions. Whether you're launching a product or
+                    scaling a platform, our agile expertise drives innovation with precision, speed, and purpose.</p>
+                <div class="flex space-x-6">
+                    <a href="#contact"
+                        class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg">Get
+                        Started</a>
+                    <a href="view-all-projects.html"
+                        class="btn-secondary px-8 py-4 rounded-xl font-semibold text-lg">Explore Projects</a>
+                </div>
             </div>
-          </a>
+            <div class="md:w-1/2 mt-12 md:mt-0  slide-up">
+                <spline-viewer url="https://prod.spline.design/bpDup3IsnGTneGHs/scene.splinecode"></spline-viewer>
+            </div>
         </div>
+    </section>
 
-<div class="col-12 col-md-6 col-lg-4 d-flex">
-  <a href="categories/computer_vision.html" target="_blank" class="text-decoration-none w-100">
-    <div class="card text-start shadow-sm border-0 rounded-4 p-4 h-100">
-      <img src="assets/cv.jpg" class="card-img-top img-fluid mb-3" alt="Computer Vision" style="max-height: 200px; object-fit: cover;">
-      <h3 class="fw-bold text-primary mb-2 text-center">Computer Vision</h3>
-      <p class="text-muted small text-center">
-        From object detection to OCR and image segmentation, we build computer vision systems that extract meaning from pixels and automate visual understanding at scale.
-      </p>
+    <!-- Capabilites Section -->
+ <section id="projects" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Our <span class="gradient-text">Capabilities</span></h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our cutting-edge services in AI/ML,
+                Generative AI, Web Development, and Computer Vision — transforming business operations through
+                intelligent, scalable, and future-ready solutions.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 cursor-pointer">
+            <a href="view-all-projects.html#generative-ai" class="capability-card">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale slide-up h-full flex flex-col"
+                    style="animation-delay: 0.1s;">
+                    <img src="https://static.vecteezy.com/system/resources/previews/030/761/656/large_2x/artificial-intelligence-abstract-background-the-future-of-artificial-intelligence-generative-ai-free-photo.jpg"
+                        class="w-full h-56 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Generative AI</h3>
+                        <p class="text-gray-600 mb-4">
+                            At Nexvative, we specialize in crafting intelligent systems powered by state-of-the-art
+                            Generative AI.
+                            Our solutions help businesses automate, understand, and generate human-like content using
+                            the latest
+                            advancements in large language models (LLMs).
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="view-all-projects.html#ai-ml">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale slide-up h-full flex flex-col"
+                    style="animation-delay: 0.2s;">
+                    <img src="https://factcheckhub.com/wp-content/uploads/2023/07/AI-7.jpg"
+                         class="w-full h-56 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">ML & AI</h3>
+                        <p class="text-gray-600 mb-4">
+                            We design and deploy machine learning models that power data-driven decisions—from classical
+                            ML
+                            pipelines to cutting-edge AI systems across industries like healthcare, finance, and
+                            operations.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="view-all-projects.html#computer-vision">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale slide-up h-full flex flex-col"
+                    style="animation-delay: 0.3s;">
+                    <img src="https://wallpaperaccess.com/full/8417419.jpg"
+                        class="w-full h-56 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Computer Vision</h3>
+                        <p class="text-gray-600 mb-4">
+                            From object detection to OCR and image segmentation, we build computer vision systems that
+                            extract meaning from pixels and automate visual understanding at scale.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="view-all-projects.html#web-development">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover-scale slide-up h-full flex flex-col"
+                    style="animation-delay: 0.4s;">
+                    <img src="https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg"
+                         class="w-full h-56 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Web Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            We create modern, responsive, and scalable web applications—from full-stack platforms to
+                            smart frontends powered by AI integrations and API services.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="text-center mt-12 fade-in">
+            <a href="view-all-projects.html" class="btn-secondary px-8 py-4 rounded-xl font-semibold text-lg">
+                Explore Projects</a>
+        </div>
     </div>
-  </a>
-</div>
+</section>
 
+    <section id="contact" class="py-24 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg text-blue-100 max-w-2xl mx-auto">Ready to start your project? Contact us today</p>
+            </div>
 
-<div class="col-12 col-md-6 col-lg-4 d-flex">
-  <a href="categories/web_development.html" target="_blank" class="text-decoration-none w-100">
-    <div class="card text-start shadow-sm border-0 rounded-4 p-4 h-100">
-      <img src="assets/web_dev.avif" class="card-img-top img-fluid mb-3" alt="Web Development" style="max-height: 200px; object-fit: cover;">
-      <h3 class="fw-bold text-primary mb-2 text-center">Web Development</h3>
-      <p class="text-muted small text-center">
-        We create modern, responsive, and scalable web applications—from full-stack platforms to smart frontends powered by AI integrations and API services.
-      </p>
-    </div>
-  </a>
-</div>
+            <div class="flex justify-center space-x-8">
+                <!-- Gmail Icon -->
+                <a href="mailto:your-email@gmail.com"
+                    class="bg-white/10 p-4 rounded-full hover:bg-white/20 transition-all duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                </a>
 
-      </div>
-    </div>
-  </section>
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/" target="_blank"
+                    class="bg-white/10 p-4 rounded-full hover:bg-white/20 transition-all duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
 
+                <!-- GitHub Icon -->
+                <a href="https://github.com/" target="_blank"
+                    class="bg-white/10 p-4 rounded-full hover:bg-white/20 transition-all duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact" class="py-5 text-center vh-100 vw-100 d-flex justify-content-center align-items-center"
-    style="background: #f8f9fa;">
-    <div class="container">
-      <h2 class="display-5 fw-semibold text-primary mb-4">Contact Us</h2>
-      <p class="text-muted mb-5">Feel free to reach out through any of the platforms below.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0 fade-in">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Nexvative</h3>
+                    <p class="text-gray-400 text-lg">Innovative technology solutions to power your business growth and
+                        digital transformation.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- GitHub Icon -->
+                        <a href="https://github.com/Nexvative" target="_blank"
+                            class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <!-- Gmail Icon -->
+                        <a href="mailto:nexvativetech1@gmail.com" target="_blank"
+                            class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/company/105403830" target="_blank"
+                            class="text-gray-400 hover:gradient-text transition">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-      <div class="d-flex justify-content-center gap-4">
-        <!-- Email -->
-        <a href="mailto:nexvativetech1@gmail.com" target="_blank" class="text-decoration-none text-dark">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 48 48">
-            <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
-            <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
-            <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon>
-            <path fill="#c62828"
-              d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path>
-            <path fill="#fbc02d"
-              d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
-            </path>
-          </svg>
-        </a>
+                <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.1s;">
+                    <h4 class="text-xl font-semibold mb-4 gradient-text">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-lg text-gray-400 hover:gradient-text transition">Generative Ai</a>
+                        </li>
+                        <li><a href="#" class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
+                        <li><a href="#" class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a>
+                        </li>
+                        <li><a href="#" class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a>
+                        </li>
+                    </ul>
+                </div>
 
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/company/105403830" target="_blank" class="text-decoration-none text-dark">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 48 48">
-            <path fill="#0288d1" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"></path>
-            <path fill="#fff"
-              d="M14 19H18V34H14zM15.988 17h-.022C14.772 17 14 16.11 14 14.999 14 13.864 14.796 13 16.011 13c1.217 0 1.966.864 1.989 1.999C18 16.11 17.228 17 15.988 17zM35 24.5c0-3.038-2.462-5.5-5.5-5.5-1.862 0-3.505.928-4.5 2.344V19h-4v15h4v-8c0-1.657 1.343-3 3-3s3 1.343 3 3v8h4C35 34 35 24.921 35 24.5z">
-            </path>
-          </svg> </a>
+                <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.2s;">
+                    <h4 class="text-xl font-semibold mb-4 gradient-text">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">About Us</a>
+                        </li>
+                        <li><a href="view-all-projects.html" class="text-lg text-gray-400 hover:gradient-text transition">Our
+                                Work</a></li>
+                        <li><a href="index.html#contact" class="text-lg text-gray-400 hover:gradient-text transition">Contact</a></li>
 
-        <!-- GitHub -->
-        <a href="https://github.com/Nexvative" target="_blank" class="text-decoration-none text-dark">
-          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 72 72">
-            <path
-              d="M 36 12 C 22.745 12 12 22.745 12 36 C 12 49.255 22.745 60 36 60 C 49.255 60 60 49.255 60 36 C 60 22.745 49.255 12 36 12 z M 36 20 C 44.837 20 52 27.163 52 36 C 52 43.284178 47.128298 49.420174 40.46875 51.355469 C 40.198559 51.103128 39.941627 50.74363 39.953125 50.285156 C 39.980125 49.233156 39.953125 46.778953 39.953125 45.876953 C 39.953125 44.328953 38.972656 43.230469 38.972656 43.230469 C 38.972656 43.230469 46.654297 43.316141 46.654297 35.119141 C 46.654297 31.957141 45.003906 30.310547 45.003906 30.310547 C 45.003906 30.310547 45.872125 26.933953 44.703125 25.501953 C 43.393125 25.359953 41.046922 26.753297 40.044922 27.404297 C 40.044922 27.404297 38.457406 26.753906 35.816406 26.753906 C 33.175406 26.753906 31.587891 27.404297 31.587891 27.404297 C 30.586891 26.753297 28.239687 25.360953 26.929688 25.501953 C 25.760688 26.933953 26.628906 30.310547 26.628906 30.310547 C 26.628906 30.310547 24.974609 31.956141 24.974609 35.119141 C 24.974609 43.316141 32.65625 43.230469 32.65625 43.230469 C 32.65625 43.230469 31.782197 44.226723 31.693359 45.652344 C 31.180078 45.833418 30.48023 46.048828 29.8125 46.048828 C 28.2025 46.048828 26.978297 44.483766 26.529297 43.759766 C 26.086297 43.045766 25.178031 42.447266 24.332031 42.447266 C 23.775031 42.447266 23.503906 42.726922 23.503906 43.044922 C 23.503906 43.362922 24.285781 43.585781 24.800781 44.175781 C 25.887781 45.420781 25.866281 48.21875 29.738281 48.21875 C 30.196553 48.21875 31.021102 48.11542 31.677734 48.025391 C 31.674106 48.90409 31.663893 49.74536 31.677734 50.285156 C 31.688158 50.700354 31.476914 51.032045 31.236328 51.279297 C 24.726159 49.25177 20 43.177886 20 36 C 20 27.163 27.163 20 36 20 z">
-            </path>
-          </svg>
-      </div>
-    </div>
-  </section>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-lg text-gray-400 hover:gradient-text transition">2025. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hidden"
+        aria-label="Back to Top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.18/build/spline-viewer.js"></script>
+    <script src="script.js"></script>
 
-
+   
 </body>
 
 </html>
