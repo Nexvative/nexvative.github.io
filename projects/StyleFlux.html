@@ -42,60 +42,104 @@
         </div>
     </header>
 
-    <!-- Project Detail Section -->
-    <section id="project-detail" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">StyleFlux: Real-Time Artistic Makeover</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                     User uploads 2 images a style image and a source image the source image is transformed to include the style from the style image. Deployed using FastAPI on Runpod.io, Uses the INSTANTSTYLE pipeline under the hood. Used Celery to create background workers and speed up inference time. 
-                </p>
-            </div>
 
-            <div class="slide-up">
-                <!-- Compact Image Slider Section -->
-                <div class="relative max-w-4xl mx-auto">
-                    <div class="swiper project-slider rounded-xl shadow-lg overflow-hidden">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/StyleFlux/Picture7.png')">
-                                <img src="/assets/StyleFlux/Picture7.png" class="w-full h-auto object-cover">
-                            </div>
-
-                             <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/StyleFlux/Picture8.png')">
-                                <img src="/assets/StyleFlux/Picture8.png" class="w-full h-auto object-cover">
-                            </div>
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/StyleFlux/Picture9.png')">
-                                <img src="/assets/StyleFlux/Picture9.png" class="w-full h-auto object-cover">
-                            </div>
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/StyleFlux/Picture10.png')">
-                                <img src="/assets/StyleFlux/Picture10.png" class="w-full h-auto object-cover">
-                            </div>
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/StyleFlux/Picture11.png')">
-                                <img src="/assets/StyleFlux/Picture11.png" class="w-full h-auto object-cover">
-                            </div>
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/StyleFlux/Picture12.png')">
-                                <img src="/assets/StyleFlux/Picture12.png" class="w-full h-auto object-cover">
-                            </div>
-                            
-                           
-                        </div>
-                        <!-- Add pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-90 p-4">
-        <div class="relative max-w-6xl max-h-screen">
-            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl hover:text-gray-300">&times;</button>
-            <img id="lightbox-img" class="max-w-full max-h-screen" src="" alt="">
-            <div id="lightbox-caption" class="text-white text-center mt-2 text-lg"></div>
-        </div>
+ <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-6 max-w-5xl text-center">
+    <h1 class="text-5xl font-bold mb-4">StyleFlux: Real-Time Artistic Makeover</h1>
+    <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+      Real-time artistic style transfer using deep learning. Upload a photo and a style reference — and watch the transformation happen in seconds.
+    </p>
+    
+    <div class="flex justify-center">
+      <img src="../assets/StyleFlux/Picture11.png" alt="StyleFlux Example" class="max-w-full md:max-w-3xl w-full rounded-xl shadow-lg">
     </div>
+  </div>
+</section>
+
+
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="text-3xl font-semibold mb-6">The Problem</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      Artistic style transfer is powerful but often slow, requiring GPU-heavy models that aren’t user-friendly in deployment. Most tools exist only in research notebooks.
+    </p>
+    <p class="text-lg text-gray-700">
+      StyleFlux solves this by turning research into an accessible, real-time experience — optimized for speed, reliability, and creativity.
+    </p>
+  </div>
+</section>
+
+
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <h2 class="text-3xl font-semibold text-center mb-12">How StyleFlux Works</h2>
+    <div class="grid md:grid-cols-3 gap-6 items-start text-center">
+      <div>
+        <p class="text-lg font-medium mb-2">Source Image</p>
+        <img src="/assets/StyleFlux/source.png" alt="Source" class="rounded-xl shadow-lg mx-auto">
+      </div>
+      <div>
+        <p class="text-lg font-medium mb-2">Style Image</p>
+        <img src="/assets/StyleFlux/style.png" alt="Style" class="rounded-xl shadow-lg mx-auto">
+      </div>
+      <div>
+        <p class="text-lg font-medium mb-2">Stylized Output</p>
+        <img src="/assets/StyleFlux/output.png" alt="Output" class="rounded-xl shadow-lg mx-auto">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="text-3xl font-semibold mb-6">Under the Hood</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      At the core, StyleFlux uses a custom-tuned neural style transfer model built for high-performance inference. The backend leverages <span class="font-semibold">Celery workers</span> and <span class="font-semibold">Redis queues</span> to asynchronously handle requests — ensuring low-latency processing even under load.
+    </p>
+    <p class="text-lg text-gray-700">
+      This architecture reflects our team's MLOps proficiency — combining scalable pipelines, lightweight containers, and optimized model loading.
+    </p>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6 max-w-4xl text-center">
+    <h2 class="text-3xl font-semibold mb-6">What We Learned</h2>
+    <p class="text-lg text-gray-700 mb-4">
+      From model optimization to real-world deployment, StyleFlux gave us hands-on experience with the challenges of building computer vision products that perform well in production — not just in research.
+    </p>
+    <p class="text-lg text-gray-700">
+      This project taught us how to reduce latency in vision pipelines, monitor model performance, and build tools that feel fast and fluid to end users.
+    </p>
+  </div>
+</section>
+    
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-semibold mb-10 text-center">More from Our Portfolio</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">DermaIQ: AI-Powered Skin Health Assistant</h4>
+        <p class="text-gray-600">A computer vision–driven web platform to detect 10 facial skin conditions and provide personalized guidance through an intelligent AI assistant.</p>
+        <a href="StyleFlux.html" class="text-blue-600 mt-3 inline-block">View Project →</a>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Variational Auto Encoder for Data Augmentation</h4>
+        <p class="text-gray-600">A generative model for augmenting training datasets.</p>
+        <a href="vae.html" class="text-blue-600 mt-3 inline-block">View Project →</a>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Brain Tumor Segmentation</h4>
+        <p class="text-gray-600">A deep learning model for segmenting brain tumors in MRI scans.</p>
+        <a href="brainTumor.html" class="text-blue-600 mt-3 inline-block">View Project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
