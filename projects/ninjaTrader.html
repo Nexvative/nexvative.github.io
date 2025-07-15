@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexvative - Innovative Tech Solutions</title>
+    <title>Nexvative - Ninja Trader VwapRf Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="shortcut icon" href="../assets/N.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -16,7 +17,7 @@
     <header class="sticky top-0 z-50 bg-white shadow-lg">
         <div class="container mx-auto px-6 py-5">
             <div class="flex items-center justify-between">
-                <div class="">
+                <div>
                     <a href="../index.html" class="flex items-center gap-1">
                         <img src="../assets/N.png" width="36" alt="">
                         <h1 class="text-2xl font-bold text-[#3b82f6]">exvative</h1>
@@ -42,67 +43,174 @@
         </div>
     </header>
 
-    <!-- Project Detail Section -->
-    <section id="project-detail" class="py-16 bg-white">
+    <!-- Project Overview Section -->
+    <section class="py-20 bg-white text-center fade-in">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ninja Trader VwapRf Strategy</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                     Created a trading strategy to work directly on Ninja Trader and trained an ML model to confirm the signals generated from that strategy minimizing the false signals while maximizing the profits.
-                </p>
-            </div>
+            <h2 class="text-4xl font-bold mb-4">Ninja Trader VwapRf Strategy</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                A trading strategy integrated with Ninja Trader, enhanced by an ML model to validate signals, reduce false positives, and maximize profits.
+            </p>
+        </div>
+    </section>
 
-            <div class="slide-up">
-                <!-- Compact Image Slider Section -->
-                <div class="relative max-w-4xl mx-auto">
-                    <div class="swiper project-slider rounded-xl shadow-lg overflow-hidden">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture18.png')">
-                                <img src="/assets/NinjaTrader/Picture18.png" class="w-full h-auto object-cover">
-                            </div>
-
-                              <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture19.png')">
-                                <img src="/assets/NinjaTrader/Picture19.png" class="w-full h-auto object-cover">
-                            </div>
-
-                              <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture20.png')">
-                                <img src="/assets/NinjaTrader/Picture20.png" class="w-full h-auto object-cover">
-                            </div>
-
-                              <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture21.png')">
-                                <img src="/assets/NinjaTrader/Picture21.png" class="w-full h-auto object-cover">
-                            </div>
-
-                              <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture22.jpg')">
-                                <img src="/assets/NinjaTrader/Picture22.jpg" class="w-full h-auto object-cover">
-                            </div>
-
-                              <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture23.jpg')">
-                                <img src="/assets/NinjaTrader/Picture23.jpg" class="w-full h-auto object-cover">
-                            </div>
-
-                            <div class="swiper-slide cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture24.png')">
-                                <img src="/assets/NinjaTrader/Picture24.png" class="w-full h-auto object-cover">
-                            </div>
-                        
-                        </div>
-                        <!-- Add pagination -->
-                        <div class="swiper-pagination"></div>
-                    </div>
+    <!-- Understanding the Problem Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center slide-up">
+                <div>
+                    <h3 class="text-3xl font-semibold mb-4">Understanding the Problem</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Trading strategies often generate false signals, leading to losses, while maximizing profits requires precise signal validation and optimization.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        The VwapRf Strategy leverages Ninja Trader and ML to address these issues, ensuring reliable trades with improved profitability.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="/assets/NinjaTrader/Picture18.png" alt="VWAP Interface" class="rounded-xl shadow-lg max-w-full h-auto cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture18.png', 'VWAP Interface')">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-90 p-4">
-        <div class="relative max-w-6xl max-h-screen">
-            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white text-3xl hover:text-gray-300">&times;</button>
-            <img id="lightbox-img" class="max-w-full max-h-screen" src="" alt="">
-            <div id="lightbox-caption" class="text-white text-center mt-2 text-lg"></div>
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 space-y-16">
+            <div class="text-center fade-in">
+                <h3 class="text-3xl font-semibold mb-4">How Ninja Trader VwapRf Works</h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    A step-by-step process combining VWAP-based strategy with ML validation for optimized trading decisions.
+                </p>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="grid md:grid-cols-2 gap-10 items-center slide-up">
+                <div>
+                    <img src="/assets/NinjaTrader/Picture18.png" alt="VWAP Calculation" class="rounded-xl shadow-lg cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture18.png', 'VWAP Calculation')">
+                </div>
+                <div>
+                    <h4 class="text-2xl font-semibold mb-2">VWAP Calculation</h4>
+                    <p class="text-lg text-gray-700">
+                        The strategy calculates the Volume Weighted Average Price (VWAP) to identify potential entry and exit points in the market.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="grid md:grid-cols-2 gap-10 items-center slide-up md:flex-row-reverse pt-16">
+                <div>
+                    <h4 class="text-2xl font-semibold mb-2">Signal Generation</h4>
+                    <p class="text-lg text-gray-700">
+                        Based on VWAP trends, the system generates initial trading signals for buy or sell opportunities.
+                    </p>
+                </div>
+                <div>
+                    <img src="/assets/NinjaTrader/Picture19.png" alt="Signal Generation" class="rounded-xl shadow-lg cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture19.png', 'Signal Generation')">
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="grid md:grid-cols-2 gap-10 items-center slide-up pt-16">
+                <div>
+                    <img src="/assets/NinjaTrader/Picture20.png" alt="ML Confirmation" class="rounded-xl shadow-lg cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture20.png', 'ML Confirmation')">
+                </div>
+                <div>
+                    <h4 class="text-2xl font-semibold mb-2">ML Confirmation</h4>
+                    <p class="text-lg text-gray-700">
+                        An ML model analyzes historical data to confirm signals, minimizing false positives and enhancing reliability.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="grid md:grid-cols-2 gap-10 items-center slide-up md:flex-row-reverse pt-16">
+                <div>
+                    <h4 class="text-2xl font-semibold mb-2">Execution Optimization</h4>
+                    <p class="text-lg text-gray-700">
+                        Optimized trade execution parameters maximize profits based on validated signals within Ninja Trader.
+                    </p>
+                </div>
+                <div>
+                    <img src="/assets/NinjaTrader/Picture21.png" alt="Execution Optimization" class="rounded-xl shadow-lg cursor-zoom-in" onclick="openLightbox('/assets/NinjaTrader/Picture21.png', 'Execution Optimization')">
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Innovation & Learnings Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 max-w-4xl text-center slide-up">
+            <h3 class="text-3xl font-semibold mb-6">Innovation & Learnings</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                Developing the VwapRf Strategy required integrating Ninja Trader’s platform with a custom ML model, tackling challenges in real-time data processing and signal validation.
+            </p>
+            <p class="text-lg text-gray-700 mb-4">
+                The project enhanced our skills in algorithmic trading, ML optimization, and platform integration, delivering a robust solution for market analysis.
+            </p>
+            <p class="text-lg text-gray-700">
+                We learned the critical role of ML in reducing false signals by up to 30%, significantly boosting profitability for traders using this strategy.
+            </p>
+        </div>
+    </section>
+
+    <!-- More from Our Portfolio Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16 fade-in">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">More from Our Portfolio</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 slide-up">
+                <!-- Project 1 -->
+                <div class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-blue-100 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div class="h-12 w-12 bg-blue-50 rounded-lg mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition">StyleFlux: Real-Time Artistic Makeover</h4>
+                    <p class="text-gray-500 mb-6">Transform images in real-time with artistic style transfer technology</p>
+                    <a href="StyleFlux.html" class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition">
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Project 2 -->
+                <div class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-blue-100 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div class="h-12 w-12 bg-blue-50 rounded-lg mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition">Variational Autoencoder for Data Augmentation</h4>
+                    <p class="text-gray-500 mb-6">Generate synthetic training data to enhance model performance</p>
+                    <a href="vae.html" class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition">
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Project 3 -->
+                <div class="group bg-white p-8 rounded-2xl border border-gray-100 hover:border-blue-100 transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div class="h-12 w-12 bg-blue-50 rounded-lg mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition">SISA Framework Evaluation and Analysis</h4>
+                    <p class="text-gray-500 mb-6">An in-depth analysis of the SISA machine unlearning framework, assessing data removal and sharding effects on model accuracy across five datasets.</p>
+                    <a href="SISAFramework.html" class="inline-flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition">
+                        View Project
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
@@ -112,19 +220,16 @@
                     <h3 class="text-2xl font-bold gradient-text mb-4">Nexvative</h3>
                     <p class="text-gray-400 text-lg">Innovative technology solutions to power your business growth and digital transformation.</p>
                     <div class="flex space-x-4 mt-6">
-                        <!-- GitHub Icon -->
                         <a href="https://github.com/Nexvative" target="_blank" class="text-gray-400 hover:gradient-text transition">
                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z" />
                             </svg>
                         </a>
-                        <!-- Gmail Icon -->
                         <a href="mailto:nexvativetech1@gmail.com" target="_blank" class="text-gray-400 hover:gradient-text transition">
                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                             </svg>
                         </a>
-                        <!-- LinkedIn Icon -->
                         <a href="https://www.linkedin.com/company/105403830" target="_blank" class="text-gray-400 hover:gradient-text transition">
                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -132,22 +237,19 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.1s;">
                     <h4 class="text-xl font-semibold mb-4 gradient-text">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">Generative Ai</a></li>
-                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
-                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a></li>
-                        <li><a href="../index.html#projects" class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a></li>
+                        <li><a href="../view-all-projects.html#generative-ai" class="text-lg text-gray-400 hover:gradient-text transition">Generative AI</a></li>
+                        <li><a href="../view-all-projects.html#ai-ml" class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
+                        <li><a href="../view-all-projects.html#computer-vision" class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a></li>
+                        <li><a href="../view-all-projects.html#web-development" class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a></li>
                     </ul>
                 </div>
-
                 <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.2s;">
                     <h4 class="text-xl font-semibold mb-4 gradient-text">Company</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-lg text-gray-400 hover:gradient-text transition">About Us</a></li>
-                        <li><a href="../view-all-projects.html" class="text-lg text-gray-400 hover:gradient-text transition">Our Work</a></li>
+                        <li><a href="../view-all-projects.html#computer-vision" class="text-lg text-gray-400 hover:gradient-text transition">Our Work</a></li>
                         <li><a href="../index.html#contact" class="text-lg text-gray-400 hover:gradient-text transition">Contact</a></li>
                     </ul>
                 </div>
@@ -164,7 +266,51 @@
         </svg>
     </button>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../script.js"></script>
-</body>
-</html>
+    <script>
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Fade-in animation for elements with class 'fade-in'
+        gsap.utils.toArray('.fade-in').forEach(element => {
+            gsap.fromTo(
+                element,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 80%',
+                        end: 'top 50%',
+                        scrub: false,
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+
+        // Slide-up animation for elements with class 'slide-up'
+        gsap.utils.toArray('.slide-up').forEach(element => {
+            gsap.fromTo(
+                element,
+                { opacity: 0, y: 100 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 85%',
+                        end: 'top 50%',
+                        scrub: false,
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+    </script>

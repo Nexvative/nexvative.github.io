@@ -118,30 +118,6 @@ body {
 }
 
 
-  /* Custom slider sizing */
-    .project-slider {
-        max-height: 400px;
-    }
-    
-    /* Smaller pagination dots */
-    .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        opacity: 0.5;
-        background: gray;
-    }
-    .swiper-pagination-bullet-active {
-        opacity: 1;
-        background: #3b82f6;
-    }
-    
-    /* Lightbox styling */
-    #lightbox {
-        transition: opacity 0.3s ease;
-    }
-    #lightbox-img {
-        transition: transform 0.3s ease;
-    }
 
 
 

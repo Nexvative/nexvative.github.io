@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=montserrat:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="N.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/N.png" type="image/x-icon">
     
   <style>
         @keyframes fadeIn {
@@ -96,8 +96,8 @@
             
             <!-- Tab Navigation -->
             <div class="flex flex-wrap justify-center mb-12 space-x-2 space-y-2 sm:space-y-0">
-                <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100 active" 
-                        data-tab="all">All</button>
+                <!-- <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100 active" 
+                        data-tab="all">All</button> -->
                 <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100" 
                         data-tab="generative-ai">Generative AI</button>
                 <button class="tab-button px-6 py-3 rounded-xl text-lg font-medium text-gray-900 bg-gray-100" 
@@ -111,7 +111,7 @@
             <!-- Projects Container -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
                 <!-- Project 1 -->
-                <a href="projects/dermaIQ.html" class="group project" data-categories="generative-ai web-development">
+                <a href="projects/dermaIQ.html" class="group project" data-categories="generative-ai web-development computer-vision">
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
                         <div class="h-56 overflow-hidden">
                             <img src="assets/DermaIQ/Picture1.png" alt="DermaIQ" class="w-full h-full object-cover">
@@ -127,7 +127,7 @@
                 </a>
                 
                 <!-- Project 2 -->
-                <a href="projects/StyleFlux.html" class="group project" data-categories="web-development">
+                <a href="projects/StyleFlux.html" class="group project" data-categories="web-development computer-vision">
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
                         <div class="h-56 overflow-hidden">
                             <img src="assets/StyleFlux/Picture10.png" alt="StyleFlux" class="w-full h-full object-cover">
@@ -175,7 +175,7 @@
                 </a>
                 
                 <!-- Project 5 -->
-                <a href="projects/researchArchie.html" class="group project" data-categories="generative-ai">
+                <a href="projects/researchArchie.html" class="group project" data-categories="generative-ai web-development">
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300 flex flex-col h-full">
                         <div class="h-56 overflow-hidden">
                             <img src="assets/ReasearchARCHIE/Picture16.png" alt="Research ARCHIE" class="w-full h-full object-cover">
@@ -231,7 +231,7 @@ Tested 5 Different Datasets using different deep learning architectures and repo
             </div>
         </div>
     </section>
-    <footer class="bg-gray-900 text-white py-12">
+       <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="mb-8 md:mb-0 fade-in">
@@ -272,16 +272,12 @@ Tested 5 Different Datasets using different deep learning architectures and repo
                 <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.1s;">
                     <h4 class="text-xl font-semibold mb-4 gradient-text">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html#projects"
-                                class="text-lg text-gray-400 hover:gradient-text transition">Generative Ai</a>
+                        <li><a href="view-all-projects.html#generative-ai" class="text-lg text-gray-400 hover:gradient-text transition">Generative Ai</a>
                         </li>
-                        <li><a href="index.html#projects"
-                                class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
-                        <li><a href="index.html#projects"
-                                class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a>
+                        <li><a href="view-all-projects.html#ai-ml" class="text-lg text-gray-400 hover:gradient-text transition">AI/ML</a></li>
+                        <li><a href="view-all-projects.html#computer-vision" class="text-lg text-gray-400 hover:gradient-text transition">Computer Vision</a>
                         </li>
-                        <li><a href="index.html#projects"
-                                class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a>
+                        <li><a href="view-all-projects.html#web-development" class="text-lg text-gray-400 hover:gradient-text transition">Web Development</a>
                         </li>
                     </ul>
                 </div>
@@ -289,17 +285,13 @@ Tested 5 Different Datasets using different deep learning architectures and repo
                 <div class="mb-8 md:mb-0 slide-up" style="animation-delay: 0.2s;">
                     <h4 class="text-xl font-semibold mb-4 gradient-text">Company</h4>
                     <ul class="space-y-3">
-                        <li><a href="#about" class="text-lg text-gray-400 hover:gradient-text transition">About Us</a>
-                        </li>
-                        <li><a href="view-all-projects.html"
-                                class="text-lg text-gray-400 hover:gradient-text transition">Our
+                
+                        <li><a href="view-all-projects.html#computer-vision" class="text-lg text-gray-400 hover:gradient-text transition">Our
                                 Work</a></li>
-                        <li><a href="index.html#contact"
-                                class="text-lg text-gray-400 hover:gradient-text transition">Contact</a></li>
+                        <li><a href="index.html#contact" class="text-lg text-gray-400 hover:gradient-text transition">Contact</a></li>
+
                     </ul>
                 </div>
-
-
                 <div>
                     <p class="text-lg text-gray-400 hover:gradient-text transition">2025. All rights reserved.</p>
                 </div>

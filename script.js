@@ -76,3 +76,9 @@ backToTopButton.addEventListener('click', () => {
             closeLightbox();
         }
     });
+
+
+
+    // GSAP
+
+    
